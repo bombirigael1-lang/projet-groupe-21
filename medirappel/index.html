@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediRappel - Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h1><span class="icon" data-icon="logo"></span> MediRappel</h1>
+        <nav>
+            <a href="index.html" class="active"><span class="icon" data-icon="home"></span> Accueil</a>
+            <a href="medicaments.html"><span class="icon" data-icon="pill"></span> Mes médicaments</a>
+            <a href="calendrier.html"><span class="icon" data-icon="bell"></span> Calendrier / Rappels</a>
+            <a href="suivi.html"><span class="icon" data-icon="bar-chart"></span> Suivi</a>
+            <a href="aidant.html"><span class="icon" data-icon="users"></span> Espace aidant</a>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <div class="topbar">
+            <div class="search-box"><span class="icon" data-icon="search"></span><input type="text" placeholder="Rechercher un médicament, un rappel..."></div>
+            <div class="topbar-icons">
+                <button class="topbar-icon-btn" title="Calendrier"><span class="icon" data-icon="calendar"></span></button>
+                <button class="topbar-icon-btn" title="Notifications"><span class="icon" data-icon="bell"></span></button>
+            </div>
+            <div class="topbar-user"><span class="avatar">MD</span> Monique Delacroix</div>
+        </div>
+
+        <div class="container">
+            <div class="page-intro">
+                <h2>Bonjour Monique, voici vos prises d'aujourd'hui</h2>
+                <p id="date-du-jour"></p>
+            </div>
+
+            <div class="home-stats" id="home-stats"></div>
+
+            <section>
+                <h2>Vos prises d'aujourd'hui</h2>
+                <div id="prises-du-jour"></div>
+            </section>
+
+            <div class="quick-actions">
+                <a href="calendrier.html" class="btn btn-primary"><span class="icon" data-icon="bell"></span> Voir tous mes rappels</a>
+                <a href="medicaments.html" class="btn btn-secondary"><span class="icon" data-icon="plus"></span> Ajouter un médicament</a>
+                <a href="suivi.html" class="btn btn-tertiary"><span class="icon" data-icon="bar-chart"></span> Voir mon suivi</a>
+            </div>
+
+            <section>
+                <div class="promo-card">
+                    <div class="emoji"><span class="icon" data-icon="family"></span></div>
+                    <div class="text">
+                        <h3>Vous êtes bien accompagné(e) !</h3>
+                        <p>MediRappel vous aide à suivre vos traitements au quotidien en toute sérénité. Si vous le souhaitez, votre aidant peut consulter votre suivi pour vous accompagner au mieux.</p>
+                    </div>
+                    <a href="aidant.html" class="btn btn-primary">Accéder à l'espace aidant</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/icons.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/accueil.js"></script>
+</body>
+</html>
 
