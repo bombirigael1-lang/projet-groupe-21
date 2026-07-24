@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediRappel - Mes médicaments</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h1><span class="icon" data-icon="logo"></span> MediRappel</h1>
+        <nav>
+            <a href="index.html"><span class="icon" data-icon="home"></span> Accueil</a>
+            <a href="medicaments.html" class="active"><span class="icon" data-icon="pill"></span> Mes médicaments</a>
+            <a href="calendrier.html"><span class="icon" data-icon="bell"></span> Calendrier / Rappels</a>
+            <a href="suivi.html"><span class="icon" data-icon="bar-chart"></span> Suivi</a>
+            <a href="aidant.html"><span class="icon" data-icon="users"></span> Espace aidant</a>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <div class="topbar">
+            <div class="search-box"><span class="icon" data-icon="search"></span><input type="text" placeholder="Rechercher un médicament, un rappel..."></div>
+            <div class="topbar-icons">
+                <button class="topbar-icon-btn" title="Calendrier"><span class="icon" data-icon="calendar"></span></button>
+                <button class="topbar-icon-btn" title="Notifications"><span class="icon" data-icon="bell"></span></button>
+            </div>
+            <div class="topbar-user"><span class="avatar">MD</span> Monique Delacroix</div>
+        </div>
+
+        <div class="container">
+            <div class="page-intro">
+                <h2>Mes médicaments</h2>
+                <p>Vous suivez actuellement <strong id="nb-medicaments">0</strong> médicament(s). Tout est bien organisé !</p>
+            </div>
+
+            <div class="meds-layout">
+                <section>
+                    <h2 id="form-title">Ajouter un nouveau médicament</h2>
+                    <form id="form-medicament">
+                        <input type="hidden" id="edit-id" value="">
+
+                        <div class="form-group">
+                            <label for="nom">Nom du médicament *</label>
+                            <input type="text" id="nom" name="nom" required placeholder="Ex : Lévothyrox">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dosage">Dosage *</label>
+                            <input type="text" id="dosage" name="dosage" required placeholder="Ex : 75 µg, 1 comprimé">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Quand le prendre ? *</label>
+                            <div class="horaires-group">
+                                <label class="horaire-item"><input type="checkbox" name="horaires" value="matin"> <span class="icon" data-icon="sun"></span> Matin</label>
+                                <label class="horaire-item"><input type="checkbox" name="horaires" value="midi"> <span class="icon" data-icon="cloud-sun"></span> Midi</label>
+                                <label class="horaire-item"><input type="checkbox" name="horaires" value="soir"> <span class="icon" data-icon="moon"></span> Soir</label>
+                                <label class="horaire-item"><input type="checkbox" name="horaires" value="nuit"> <span class="icon" data-icon="moon-star"></span> Nuit</label>
+                            </div>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-primary" id="submit-btn"><span class="icon" data-icon="plus"></span> Ajouter le médicament</button>
+                            <button type="button" class="btn btn-tertiary" id="cancel-edit-btn" style="display: none;">Annuler</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section>
+                    <h2>Médicaments enregistrés</h2>
+                    <div id="medicaments-list"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/icons.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/medicaments.js"></script>
+</body>
+</html>
 
