@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediRappel - Suivi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h1><span class="icon" data-icon="logo"></span> MediRappel</h1>
+        <nav>
+            <a href="index.html"><span class="icon" data-icon="home"></span> Accueil</a>
+            <a href="medicaments.html"><span class="icon" data-icon="pill"></span> Mes médicaments</a>
+            <a href="calendrier.html"><span class="icon" data-icon="bell"></span> Calendrier / Rappels</a>
+            <a href="suivi.html" class="active"><span class="icon" data-icon="bar-chart"></span> Suivi</a>
+            <a href="aidant.html"><span class="icon" data-icon="users"></span> Espace aidant</a>
+        </nav>
+    </aside>
 
+    <div class="main-wrapper">
+        <div class="topbar">
+            <div class="search-box"><span class="icon" data-icon="search"></span><input type="text" placeholder="Rechercher un médicament, un rappel..."></div>
+            <div class="topbar-icons">
+                <button class="topbar-icon-btn" title="Calendrier"><span class="icon" data-icon="calendar"></span></button>
+                <button class="topbar-icon-btn" title="Notifications"><span class="icon" data-icon="bell"></span></button>
+            </div>
+            <div class="topbar-user"><span class="avatar">MD</span> Monique Delacroix</div>
+        </div>
+
+        <div class="container">
+            <div class="page-intro">
+                <h2>Suivi de conformité</h2>
+                <p>Consultez votre historique et vos statistiques des 7 derniers jours</p>
+            </div>
+
+            <section>
+                <div class="stats-grid">
+                    <div class="progress-ring-wrap">
+                        <div class="progress-ring" id="progress-ring">
+                            <div class="progress-ring-inner">
+                                <div class="pct" id="progress-pct">0%</div>
+                                <div class="lbl">de la semaine</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3><span class="icon" data-icon="trending-up"></span> Aperçu sur 7 jours</h3>
+                        <div class="week-chart" id="week-chart"></div>
+                    </div>
+                </div>
+                <div id="bravo-banner"></div>
+            </section>
+
+            <section>
+                <h2><span class="icon" data-icon="clipboard"></span> Historique des prises récentes</h2>
+                <div id="historique-container"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/icons.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/suivi.js"></script>
+</body>
+</html>
