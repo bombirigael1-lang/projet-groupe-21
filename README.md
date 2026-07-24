@@ -13,7 +13,7 @@ MediRappel est une Application web d'aide au suivi des médicaments, pensée pou
 ## Structure du projet
 
 ```
-medirappel1(Cld)/
+medirappel/
 ├── index.html          Page d'accueil
 ├── medicaments.html     Gestion des médicaments
 ├── calendrier.html      Rappels / prises du jour
