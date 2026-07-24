@@ -1,1 +1,53 @@
+!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediRappel - Mes prises du jour</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h1><span class="icon" data-icon="logo"></span> MediRappel</h1>
+        <nav>
+            <a href="index.html"><span class="icon" data-icon="home"></span> Accueil</a>
+            <a href="medicaments.html"><span class="icon" data-icon="pill"></span> Mes médicaments</a>
+            <a href="calendrier.html" class="active"><span class="icon" data-icon="bell"></span> Calendrier / Rappels</a>
+            <a href="suivi.html"><span class="icon" data-icon="bar-chart"></span> Suivi</a>
+            <a href="aidant.html"><span class="icon" data-icon="users"></span> Espace aidant</a>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <div class="topbar">
+            <div class="search-box"><span class="icon" data-icon="search"></span><input type="text" placeholder="Rechercher un médicament, un rappel..."></div>
+            <div class="topbar-icons">
+                <button class="topbar-icon-btn" title="Calendrier"><span class="icon" data-icon="calendar"></span></button>
+                <button class="topbar-icon-btn" title="Notifications"><span class="icon" data-icon="bell"></span></button>
+            </div>
+            <div class="topbar-user"><span class="avatar">MD</span> Monique Delacroix</div>
+        </div>
+
+        <div class="container">
+            <div class="page-intro">
+                <h2 id="titre-jour">Mes prises du jour</h2>
+                <p id="message-statut"></p>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-filter="toutes">Toutes</button>
+                <button class="tab-btn" data-filter="venir">À venir</button>
+                <button class="tab-btn" data-filter="retard">En retard</button>
+                <button class="tab-btn" data-filter="faites">Faites</button>
+            </div>
+
+            <div id="rappels-du-jour"></div>
+        </div>
+    </div>
+
+    <script src="js/icons.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/calendrier.js"></script>
+</body>
+</html>
 
