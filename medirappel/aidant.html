@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediRappel - Espace aidant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h1><span class="icon" data-icon="logo"></span> MediRappel</h1>
+        <nav>
+            <a href="index.html"><span class="icon" data-icon="home"></span> Accueil</a>
+            <a href="medicaments.html"><span class="icon" data-icon="pill"></span> Mes médicaments</a>
+            <a href="calendrier.html"><span class="icon" data-icon="bell"></span> Calendrier / Rappels</a>
+            <a href="suivi.html"><span class="icon" data-icon="bar-chart"></span> Suivi</a>
+            <a href="aidant.html" class="active"><span class="icon" data-icon="users"></span> Espace aidant</a>
+        </nav>
+    </aside>
 
+    <div class="main-wrapper">
+        <div class="topbar">
+            <div class="search-box"><span class="icon" data-icon="search"></span><input type="text" placeholder="Rechercher un médicament, un rappel..."></div>
+            <div class="topbar-icons">
+                <button class="topbar-icon-btn" title="Notifications"><span class="icon" data-icon="bell"></span></button>
+            </div>
+            <div class="topbar-user"><span class="badge-aidant"><span class="icon" data-icon="users"></span> Espace Aidant</span></div>
+        </div>
+
+        <div class="container">
+            <div class="page-intro">
+                <h2>Suivi de Monique Delacroix</h2>
+                <p id="titre-jour-aidant">Consultation en lecture seule — Prises du jour</p>
+            </div>
+
+            <section>
+                <div class="alert alert-info">
+                    <strong><span class="icon" data-icon="users"></span> Mode aidant</strong> — Cette page vous permet de vérifier le statut des prises de médicaments en temps réel.
+                    Aucune modification n'est possible depuis cet espace.
+                </div>
+            </section>
+
+            <div class="aidant-chips" id="aidant-chips"></div>
+
+            <section>
+                <h2>Prises du jour</h2>
+                <div id="prises-aidant"></div>
+            </section>
+
+            <section>
+                <p>Retrouvez l'historique complet des prises de la semaine pour accompagner au mieux Monique.</p>
+                <a href="suivi.html" class="btn btn-primary" style="margin-top: 1rem;">Consulter le suivi de la semaine</a>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/icons.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/aidant.js"></script>
+</body>
+</html>
